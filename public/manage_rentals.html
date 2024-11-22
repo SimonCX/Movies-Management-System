@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Manage Rentals</title>
+</head>
+<body>
+    <a href="index.html">Return to Home</a>
+    <h1>Manage Rentals</h1>
+    
+    <h2>Add New Rental</h2>
+    <form action="/add_rental" method="post">
+        <label for="customerID">Customer:</label>
+        <select id="customerID" name="customerID" required>
+            <!-- Dynamically populate options with customer names -->
+        </select><br><br>
+
+        <label for="movieID">Movie:</label>
+        <select id="movieID" name="movieID" required>
+            <!-- Dynamically populate options with movie titles -->
+        </select><br><br>
+
+        <label for="employeeID">Employee (optional):</label>
+        <select id="employeeID" name="employeeID">
+            <!-- Dynamically populate options with employee names; nullable -->
+            <option value="">None</option>
+        </select><br><br>
+
+        <label for="rentalDate">Rental Date:</label>
+        <input type="date" id="rentalDate" name="rentalDate" required><br><br>
+
+        <label for="returnDate">Return Date (optional):</label>
+        <input type="date" id="returnDate" name="returnDate"><br><br>
+
+        <button type="submit">Add Rental</button>
+    </form>
+
+    <h2>Rental List</h2>
+    <table border="1">
+        <tr>
+            <th>Customer</th>
+            <th>Movie</th>
+            <th>Rental Date</th>
+            <th>Return Date</th>
+            <th>Status</th>
+            <th>Employee</th>
+            <th>Actions</th>
+        </tr>
+        <!-- Sample rental row -->
+        <tr>
+            <td>Michael Brown</td>
+            <td>Inception</td>
+            <td>2024-10-01</td>
+            <td>2024-10-08</td>
+            <td>Returned</td>
+            <td>Xi Chen</td>
+            <td><button>Return</button> <button class="delete-button">Delete</button></td>
+        </tr>
+    </table>
+    
+</body>
+</html>

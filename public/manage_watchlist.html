@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Manage Watchlists</title>
+</head>
+<body>
+    <a href="index.html">Return to Home</a>
+    <h1>Manage Watchlists</h1>
+    
+    <h2>Add to Watchlist</h2>
+    <form action="/add_to_watchlist" method="post">
+        <label for="customerID">Customer:</label>
+        <select id="customerID" name="customerID" required>
+            <!-- Dynamically populate options with customer names -->
+        </select><br><br>
+
+        <label for="movieID">Movie:</label>
+        <select id="movieID" name="movieID" required>
+            <!-- Dynamically populate options with movie titles -->
+        </select><br><br>
+
+        <label for="dateAdded">Date Added:</label>
+        <input type="date" id="dateAdded" name="dateAdded" required><br><br>
+
+        <button type="submit">Add to Watchlist</button>
+    </form>
+
+    <h2>Watchlist</h2>
+    <table border="1">
+        <tr>
+            <th>Customer</th>
+            <th>Movie</th>
+            <th>Date Added</th>
+            <th>Actions</th>
+        </tr>
+        <!-- Sample watchlist row -->
+        <tr>
+            <td>John Smith</td>
+            <td>Inception</td>
+            <td>2024-09-15</td>
+            <td><button class="delete-button">Remove</button></td>
+        </tr>
+    </table>
+    
+
+</body>
+</html>
